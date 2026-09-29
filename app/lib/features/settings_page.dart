@@ -39,7 +39,7 @@ class SettingsPage extends ConsumerWidget {
         const AboutListTile(
           icon: Icon(Icons.info_outline),
           applicationName: 'Ritmo',
-          applicationVersion: '0.1.1',
+          applicationVersion: '0.1.2',
           aboutBoxChildren: [Text('Hábitos, tareas y calendario en una sola app.')],
         ),
       ]),

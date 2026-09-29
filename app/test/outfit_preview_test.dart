@@ -12,6 +12,60 @@ import 'package:ritmo/pixel/pixel_assets.dart';
 void main() {
   final on = Platform.environment['RITMO_PREVIEW'] == '1';
 
+  testWidgets('capas por separado', skip: !on, (tester) async {
+    await tester.runAsync(() async {
+      const scale = 6, w = 64, h = 96;
+      const p = AvatarProfile(
+          muscle: 1,
+          autoMuscle: false,
+          equipped: {
+            ItemSlot.torso: Equipped('camiseta', 7),
+            ItemSlot.piernas: Equipped('pantalon', 7),
+            ItemSlot.pies: Equipped('zapatillas', 7),
+          });
+      final layers = (await PixelAssets.resolve(p)).layers;
+      for (var k = 0; k < 4; k++) {
+        final d = (await layers[k].image.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List();
+        final h = <String, int>{};
+        for (var i = 0; i < d.length; i += 4) {
+          if (d[i + 3] == 0) continue;
+          final key = '${d[i].toRadixString(16)}${d[i + 1].toRadixString(16)}${d[i + 2].toRadixString(16)}/a${d[i + 3]}';
+          h[key] = (h[key] ?? 0) + 1;
+        }
+        final top = h.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
+        // ignore: avoid_print
+        print('capa $k: ${top.take(9).map((e) => '${e.key}=${e.value}').join(' ')}');
+      }
+      // 0 cuerpo, 1 piernas, 2 torso, 3 pies (en el orden del código), luego cabeza...
+      final rec = ui.PictureRecorder();
+      final c = Canvas(rec);
+      const n = 5;
+      c.drawRect(Rect.fromLTWH(0, 0, (n * w * scale).toDouble(), (h * scale).toDouble()),
+          Paint()..color = const Color(0xFFFF00FF));
+      final paint = Paint()
+        ..filterQuality = FilterQuality.none
+        ..isAntiAlias = false;
+      void draw(int k, Iterable<PixelLayer> ls) {
+        for (final l in ls) {
+          c.drawImageRect(
+              l.image,
+              Rect.fromLTWH(0, 0, l.image.width.toDouble(), l.image.height.toDouble()),
+              Rect.fromLTWH((k * w * scale + l.dx * scale).toDouble(), (l.dy * scale).toDouble(),
+                  (l.image.width * scale).toDouble(), (l.image.height * scale).toDouble()),
+              paint);
+        }
+      }
+      draw(0, [layers[0]]);
+      draw(1, [layers[1]]);
+      draw(2, [layers[2]]);
+      draw(3, [layers[3]]);
+      draw(4, layers.take(4));
+      final img = await rec.endRecording().toImage(n * w * scale, h * scale);
+      File('../referencias/arte/limpio/prueba_capas.png')
+          .writeAsBytesSync((await img.toByteData(format: ui.ImageByteFormat.png))!.buffer.asUint8List());
+    });
+  });
+
   testWidgets('todos los ojos', skip: !on, (tester) async {
     await tester.runAsync(() async {
       const scale = 6, w = 40, h = 40;
@@ -19,7 +73,9 @@ void main() {
       final c = Canvas(rec);
       c.drawRect(Rect.fromLTWH(0, 0, (eyeStyles.length * w * scale).toDouble(), (h * scale).toDouble()),
           Paint()..color = const Color(0xFFEDEBF5));
-      final paint = Paint()..filterQuality = FilterQuality.none;
+      final paint = Paint()
+        ..filterQuality = FilterQuality.none
+        ..isAntiAlias = false;
       for (var k = 0; k < eyeStyles.length; k++) {
         final p = AvatarProfile(muscle: 1, autoMuscle: false, eyeStyle: k);
         for (final l in (await PixelAssets.resolve(p)).layers.skip(1)) {
@@ -48,7 +104,9 @@ void main() {
       final c = Canvas(rec);
       c.drawRect(Rect.fromLTWH(0, 0, (ids.length * w * scale).toDouble(), (h * scale).toDouble()),
           Paint()..color = const Color(0xFFEDEBF5));
-      final paint = Paint()..filterQuality = FilterQuality.none;
+      final paint = Paint()
+        ..filterQuality = FilterQuality.none
+        ..isAntiAlias = false;
       for (var k = 0; k < ids.length; k++) {
         final p = AvatarProfile(
             muscle: 1, autoMuscle: false, equipped: {ItemSlot.sombrero: Equipped(ids[k], 7)});
@@ -83,7 +141,9 @@ void main() {
       final c = Canvas(rec);
       c.drawRect(Rect.fromLTWH(0, 0, (looks.length * w * scale).toDouble(), (h * scale).toDouble()),
           Paint()..color = const Color(0xFFEDEBF5));
-      final paint = Paint()..filterQuality = FilterQuality.none;
+      final paint = Paint()
+        ..filterQuality = FilterQuality.none
+        ..isAntiAlias = false;
       for (var k = 0; k < looks.length; k++) {
         for (final l in (await PixelAssets.resolve(looks[k])).layers) {
           c.drawImageRect(
@@ -141,7 +201,9 @@ void main() {
       final totalW = cols * (w * scale + gap), totalH = looks.length * (h * scale + gap);
       c.drawRect(Rect.fromLTWH(0, 0, totalW.toDouble(), totalH.toDouble()),
           Paint()..color = const Color(0xFFEDEBF5));
-      final paint = Paint()..filterQuality = FilterQuality.none;
+      final paint = Paint()
+        ..filterQuality = FilterQuality.none
+        ..isAntiAlias = false;
       for (var r = 0; r < looks.length; r++) {
         for (var k = 0; k < cols; k++) {
           final av = await PixelAssets.resolve(looks[r][k]);

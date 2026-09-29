@@ -12,7 +12,8 @@
 <p align="center">
   <a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk"><b>⬇ Descargar para Android</b></a> ·
   <a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip"><b>⬇ Descargar para Windows</b></a> ·
-  <a href="https://ritmo-pixel.vercel.app">Sitio web</a>
+  <a href="https://ritmo-pixel.vercel.app">Sitio web</a> ·
+  <a href="https://ritmo-pixel.vercel.app/#probador">Viste a tu personaje en el navegador</a>
 </p>
 
 <p align="center">

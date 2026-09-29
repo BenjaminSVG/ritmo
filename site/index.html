@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="progreso" aria-hidden="true"></div>
 
 <header class="top">
   <div class="wrap">
@@ -23,6 +24,7 @@
     <nav>
       <a href="#funciones">Funciones</a>
       <a href="#personaje">Personaje</a>
+      <a href="#probador">Pruébalo</a>
       <a href="#juego">El juego</a>
       <a href="#widgets">Widgets</a>
       <a href="#descargar" class="cta-mini">Descargar</a>
@@ -34,6 +36,10 @@
 
   <!-- Héroe -->
   <div class="hero">
+    <div class="hero-fx" aria-hidden="true">
+      <span class="nube n1"></span><span class="nube n2"></span><span class="nube n3"></span>
+      <span class="suelo"></span>
+    </div>
     <div class="wrap">
       <div>
         <img class="marca-hero" src="img/logo.png" alt="Logo de Ritmo: un brote con un check">
@@ -43,11 +49,24 @@
           <a class="btn amarillo" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">📱 Descargar para Android</a>
           <a class="btn blanco" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip">🖥️ Descargar para Windows</a>
         </div>
-        <div class="nota-chica">Gratis · código abierto (MIT) · versión 0.1</div>
+        <div class="nota-chica">Gratis · código abierto (MIT) · versión 0.1.2</div>
       </div>
       <div class="foto">
-        <img src="img/s-personaje.png" alt="Pantalla del personaje en Ritmo, con su escena y su armario">
+        <span class="moneda m1">🪙</span><span class="moneda m2">⭐</span><span class="moneda m3">🪙</span>
+        <img class="flota" id="foto-hero" src="img/s-personaje.png" alt="Pantalla del personaje en Ritmo, con su escena y su armario">
       </div>
+    </div>
+  </div>
+
+  <!-- Cifras -->
+  <div class="cifras">
+    <div class="wrap">
+      <div><b data-cuenta="4">4</b><span>cuerpos</span></div>
+      <div><b data-cuenta="8">8</b><span>tonos de piel</span></div>
+      <div><b data-cuenta="9">9</b><span>formas de ojos</span></div>
+      <div><b data-cuenta="22">22</b><span>prendas y accesorios</span></div>
+      <div><b data-cuenta="13">13</b><span>fondos</span></div>
+      <div><b data-cuenta="5">5</b><span>widgets</span></div>
     </div>
   </div>
 
@@ -105,6 +124,38 @@
           <h3 class="pixel">Sombreros con carácter</h3>
           <p>Gorra, gorro de lana, sombrero de pescador, cinta deportiva, moño, orejas de gato, corona de flores, sombrero de paja y sombrero de mago.</p>
           <img class="pixelimg" src="img/ojos.png" alt="Nueve formas de ojos" loading="lazy" style="margin-top:12px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Probador -->
+  <section class="probador" id="probador">
+    <div class="wrap">
+      <div class="center">
+        <h2>Pruébalo tú: viste a tu personaje</h2>
+        <p class="lead">Es el mismo motor de la app, funcionando en tu navegador. Cambia el cuerpo, la piel, el pelo, la ropa y el fondo.</p>
+      </div>
+      <div class="probador-cuerpo">
+        <div class="probador-escena">
+          <canvas id="juego-lienzo" aria-label="Tu personaje de Ritmo"></canvas>
+          <div class="probador-botones">
+            <button type="button" id="c-azar" class="btn amarillo pequeno">🎲 Sorpréndeme</button>
+            <button type="button" id="c-guardar" class="btn blanco pequeno">💾 Guardar imagen</button>
+          </div>
+          <p class="chica">Los dibujos y colores son los de la app. En la app cada objeto se compra con monedas que ganas con tus hábitos.</p>
+        </div>
+        <div class="probador-controles">
+          <div class="grupo"><div class="et">Cuerpo</div><div class="chips" id="c-cuerpo"></div></div>
+          <div class="grupo"><div class="et">Musculatura: <b id="c-musculo-etiqueta"></b></div><input id="c-musculo" type="range" min="0" max="4" step="1" value="1" aria-label="Musculatura"></div>
+          <div class="grupo"><div class="et">Piel</div><div class="chips" id="c-piel"></div></div>
+          <div class="grupo"><div class="et">Pelo</div><div class="chips" id="c-pelo"></div></div>
+          <div class="grupo"><div class="et">Ojos</div><div class="chips" id="c-ojos-color"></div><div class="chips" id="c-ojos-forma" style="margin-top:8px"></div></div>
+          <div id="c-prendas"></div>
+          <div class="grupo"><div class="et">Color de las prendas</div><div class="chips" id="c-color"></div></div>
+          <div class="grupo"><div class="et">Marco de los anteojos</div><div class="chips" id="c-marco"></div></div>
+          <div class="grupo"><div class="et">Tono de la escena</div><div class="chips" id="c-tono"></div></div>
+          <div class="grupo"><div class="et">Fondo</div><div class="chips" id="c-fondo"></div></div>
         </div>
       </div>
     </div>
@@ -176,7 +227,7 @@
         <h2>Descarga Ritmo</h2>
         <a id="dl-principal" class="btn amarillo grande" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">Descargar para Android</a>
         <p id="dl-nota" class="dl-nota">Gratis, sin cuenta y de código abierto.</p>
-        <p id="dl-version" class="dl-version">Última versión: <b>v0.1.1</b></p>
+        <p id="dl-version" class="dl-version">Última versión: <b>v0.1.2</b></p>
       </div>
 
       <div class="dl-columnas">
@@ -263,6 +314,8 @@
   </div>
 </footer>
 
+<script src="efectos.js" defer></script>
+<script src="juego.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
 <script>
 (function () {

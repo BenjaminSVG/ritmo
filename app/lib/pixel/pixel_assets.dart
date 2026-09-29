@@ -27,7 +27,7 @@ Uint8List recolorRgba(Uint8List rgba, Map<int, int> map) {
     final rgb = (out[i] << 16) | (out[i + 1] << 8) | out[i + 2];
     final to = map[rgb];
     if (to == transparentColor) {
-      out[i + 3] = 0;
+      out[i] = out[i + 1] = out[i + 2] = out[i + 3] = 0;
     } else if (to != null) {
       out[i] = (to >> 16) & 0xFF;
       out[i + 1] = (to >> 8) & 0xFF;
@@ -176,9 +176,15 @@ class PixelAssets {
 
     // Ropa sobre el cuerpo (de atrás hacia adelante): piernas, torso, traje, pies.
     const clothesOrder = [ItemSlot.piernas, ItemSlot.torso, ItemSlot.traje, ItemSlot.pies];
+    final rawBody = await loadRecolored('assets/pixel/body/${p.body.id}_$lvl.png', skin);
     final clothes = <ui.Image>[
       for (final s in clothesOrder)
-        if (worn[s] case (final item, final e)) await itemImage(item, e),
+        if (worn[s] case (final item, final e))
+          if (item.fit == null)
+            await itemImage(item, e)
+          else
+            await _fitGarment(await itemImage(item, e), rawBody, item.fit!,
+                '${p.body.id}_$lvl|${item.id}|${e.color}|${p.skin}'),
     ];
 
     // Ropa interior del cuerpo: si una prenda la cubre, se rellena con el color de esa prenda (así no
@@ -192,7 +198,7 @@ class PixelAssets {
     final topWear = worn[ItemSlot.torso] ?? worn[ItemSlot.traje];
     final legWear = worn[ItemSlot.piernas] ?? worn[ItemSlot.traje];
     final bodyImg = await _dress(
-      await loadRecolored('assets/pixel/body/${p.body.id}_$lvl.png', skin),
+      rawBody,
       top: topWear == null ? null : underMap(topWear.$1, topWear.$2),
       legs: legWear == null || !legWear.$1.hidesUnderwear ? null : underMap(legWear.$1, legWear.$2),
       garments: clothes,
@@ -219,6 +225,60 @@ class PixelAssets {
     }
     return ResolvedAvatar(layers);
   }
+
+  static final _fitted = <String, Future<ui.Image>>{};
+
+  /// Ajusta una prenda al cuerpo: borra lo que pasa más de [margin] píxeles de la silueta del cuerpo y
+  /// pinta un contorno oscuro nuevo en los bordes que quedaron. Así la ropa que ChatGPT dibujó más ancha
+  /// que el personaje se ve a su medida.
+  static Future<ui.Image> _fitGarment(ui.Image garment, ui.Image body, int margin, String key) =>
+      _fitted.putIfAbsent(key, () async {
+        final w = garment.width, h = garment.height;
+        final g = Uint8List.fromList((await garment.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List());
+        final b = (await body.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List();
+
+        bool nearBody(int x, int y) {
+          for (var dy = -margin; dy <= margin; dy++) {
+            for (var dx = -margin; dx <= margin; dx++) {
+              final nx = x + dx, ny = y + dy;
+              if (nx >= 0 && ny >= 0 && nx < w && ny < h && b[(ny * w + nx) * 4 + 3] > 0) return true;
+            }
+          }
+          return false;
+        }
+
+        for (var y = 0; y < h; y++) {
+          for (var x = 0; x < w; x++) {
+            final i = (y * w + x) * 4;
+            // Se borra TODO el píxel (también su color): un píxel transparente que conserva color se
+            // dibuja como un resplandor claro.
+            if (g[i + 3] > 0 && !nearBody(x, y)) {
+              g[i] = 0;
+              g[i + 1] = 0;
+              g[i + 2] = 0;
+              g[i + 3] = 0;
+            }
+          }
+        }
+        // Contorno nuevo: todo píxel de la prenda que toca el vacío pasa a ser del color del contorno.
+        final edge = <int>[];
+        for (var y = 0; y < h; y++) {
+          for (var x = 0; x < w; x++) {
+            if (g[(y * w + x) * 4 + 3] == 0) continue;
+            bool empty(int nx, int ny) =>
+                nx < 0 || ny < 0 || nx >= w || ny >= h || g[(ny * w + nx) * 4 + 3] == 0;
+            if (empty(x - 1, y) || empty(x + 1, y) || empty(x, y - 1) || empty(x, y + 1)) edge.add(y * w + x);
+          }
+        }
+        for (final p in edge) {
+          g[p * 4] = 0x2B;
+          g[p * 4 + 1] = 0x23;
+          g[p * 4 + 2] = 0x40;
+        }
+        final done = Completer<ui.Image>();
+        ui.decodeImageFromPixels(g, w, h, ui.PixelFormat.rgba8888, done.complete);
+        return done.future;
+      });
 
   static final _dressed = <String, Future<ui.Image>>{};
 
@@ -306,7 +366,11 @@ class PixelAssets {
         final px = Uint8List.fromList(data!.buffer.asUint8List());
         for (var y = 0; y < row && y < src.height; y++) {
           for (var x = 0; x < src.width; x++) {
-            px[(y * src.width + x) * 4 + 3] = 0;
+            final i = (y * src.width + x) * 4;
+            px[i] = 0;
+            px[i + 1] = 0;
+            px[i + 2] = 0;
+            px[i + 3] = 0;
           }
         }
         final done = Completer<ui.Image>();

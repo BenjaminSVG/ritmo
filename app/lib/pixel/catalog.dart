@@ -21,8 +21,14 @@ class Item {
       this.hidesUnderwear = false,
       this.hidesSlots = const [],
       this.bodies,
+      this.fit,
       this.dy = 0,
       this.headCutRow});
+
+  /// Si no es null, la prenda se recorta para no pasar más de [fit] píxeles de la silueta del cuerpo (y
+  /// se le dibuja un contorno nuevo). Sirve para ropa que ChatGPT dibujó más ancha que el cuerpo. Las
+  /// prendas con vuelo (polleras, vestidos) no se ajustan.
+  final int? fit;
 
   /// Si no es null, las filas de la cabeza por encima de esta (en coordenadas de la imagen de la cabeza)
   /// no se dibujan: sirve para sombreros cuya copa es más angosta que la cabeza (el de mago), para que
@@ -128,17 +134,17 @@ const catalog = [
   Item('anteojos_medio_marco', 'Anteojos de medio marco', ItemSlot.cara, Rarity.comun,
       recolor: frameDrawn, palette: frameColors),
   // Torso
-  Item('camiseta', 'Camiseta', ItemSlot.torso, Rarity.comun, recolor: itemDrawn),
-  Item('buzo', 'Buzo con capucha', ItemSlot.torso, Rarity.raro, recolor: itemDrawn),
+  Item('camiseta', 'Camiseta', ItemSlot.torso, Rarity.comun, recolor: itemDrawn, fit: 1),
+  Item('buzo', 'Buzo con capucha', ItemSlot.torso, Rarity.raro, recolor: itemDrawn, fit: 2),
   // Piernas
   Item('pantalon', 'Pantalón', ItemSlot.piernas, Rarity.comun,
-      recolor: itemDrawn, hidesUnderwear: true),
+      recolor: itemDrawn, hidesUnderwear: true, fit: 1),
   Item('short', 'Short deportivo', ItemSlot.piernas, Rarity.comun,
-      recolor: itemDrawn, hidesUnderwear: true),
+      recolor: itemDrawn, hidesUnderwear: true, fit: 1),
   Item('pollera', 'Pollera', ItemSlot.piernas, Rarity.comun,
       recolor: itemDrawn, hidesUnderwear: true, bodies: _women),
   // Pies
-  Item('zapatillas', 'Zapatillas', ItemSlot.pies, Rarity.comun, recolor: itemDrawn),
+  Item('zapatillas', 'Zapatillas', ItemSlot.pies, Rarity.comun, recolor: itemDrawn, fit: 1),
   // Traje: cuerpo completo
   Item('vestido', 'Vestido de verano', ItemSlot.traje, Rarity.raro,
       recolor: itemDrawn,
