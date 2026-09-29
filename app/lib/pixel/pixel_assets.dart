@@ -166,25 +166,42 @@ class PixelAssets {
       }
     }
     final hideHair = worn.values.any((w) => w.$1.hidesHair);
-    // La ropa interior del cuerpo solo se ve si no hay nada que la cubra.
-    final hideUnderwear = worn.values.any((w) => w.$1.hidesUnderwear);
 
+    ColorPair pairOf(Item item, Equipped e) => item.colors[e.color.clamp(0, item.colors.length - 1)];
     Future<ui.Image> itemImage(Item item, Equipped e) {
       final path = item.path(lvl, p.body);
       final drawn = item.recolor;
-      return drawn == null
-          ? load(path)
-          : loadRecolored(path,
-              pairMap(drawn, item.colors[e.color.clamp(0, item.colors.length - 1)]));
+      return drawn == null ? load(path) : loadRecolored(path, pairMap(drawn, pairOf(item, e)));
     }
 
-    final bodyImg = await loadRecolored('assets/pixel/body/${p.body.id}_$lvl.png',
-        {...skin, if (hideUnderwear) for (final c in underwearColors) c: transparentColor});
+    // Ropa sobre el cuerpo (de atrás hacia adelante): piernas, torso, traje, pies.
+    const clothesOrder = [ItemSlot.piernas, ItemSlot.torso, ItemSlot.traje, ItemSlot.pies];
+    final clothes = <ui.Image>[
+      for (final s in clothesOrder)
+        if (worn[s] case (final item, final e)) await itemImage(item, e),
+    ];
+
+    // Ropa interior del cuerpo: si una prenda la cubre, se rellena con el color de esa prenda (así no
+    // queda un hueco en la entrepierna ni una franja gris). Lo de arriba (corpiño) y lo de abajo se
+    // resuelven por separado según qué prenda haya.
+    Map<int, int>? underMap(Item item, Equipped e) {
+      final c = pairOf(item, e);
+      return {0x8C84A8: c.main, 0xC9C4DB: c.main, 0x4A3F6B: c.shade};
+    }
+
+    final topWear = worn[ItemSlot.torso] ?? worn[ItemSlot.traje];
+    final legWear = worn[ItemSlot.piernas] ?? worn[ItemSlot.traje];
+    final bodyImg = await _dress(
+      await loadRecolored('assets/pixel/body/${p.body.id}_$lvl.png', skin),
+      top: topWear == null ? null : underMap(topWear.$1, topWear.$2),
+      legs: legWear == null || !legWear.$1.hidesUnderwear ? null : underMap(legWear.$1, legWear.$2),
+      garments: clothes,
+      key: '${p.body.id}_$lvl|${p.skin}|${worn.entries.map((e) => '${e.key.name}:${e.value.$1.id}:${e.value.$2.color}').join(',')}',
+    );
 
     final layers = <PixelLayer>[PixelLayer(bodyImg, 0, 0)];
-    // Ropa sobre el cuerpo (de atrás hacia adelante): piernas, torso, traje, pies.
-    for (final s in const [ItemSlot.piernas, ItemSlot.torso, ItemSlot.traje, ItemSlot.pies]) {
-      if (worn[s] case (final item, final e)) layers.add(PixelLayer(await itemImage(item, e), 0, 0));
+    for (final img in clothes) {
+      layers.add(PixelLayer(img, 0, 0));
     }
     final cut = worn.values.map((w) => w.$1.headCutRow).whereType<int>().fold<int?>(null,
         (a, b) => a == null ? b : math.max(a, b));
@@ -201,6 +218,84 @@ class PixelAssets {
       }
     }
     return ResolvedAvatar(layers);
+  }
+
+  static final _dressed = <String, Future<ui.Image>>{};
+
+  /// Fila (en la imagen de 64×96) que separa la ropa interior de arriba (corpiño) de la de abajo.
+  static const underwearSplitRow = 52;
+
+  /// Prepara el cuerpo para llevar ropa:
+  ///  1. rellena la ropa interior de arriba ([top]) y de abajo ([legs]) con el color de la prenda;
+  ///  2. pinta con el contorno oscuro los píxeles del cuerpo que quedan pegados (a 1 píxel) al borde de las
+  ///     prendas, para que no asome un reborde de piel alrededor de la ropa.
+  static Future<ui.Image> _dress(
+    ui.Image body, {
+    required Map<int, int>? top,
+    required Map<int, int>? legs,
+    required List<ui.Image> garments,
+    required String key,
+  }) {
+    if (top == null && legs == null && garments.isEmpty) return Future.value(body);
+    return _dressed.putIfAbsent(key, () async {
+      final w = body.width, h = body.height;
+      final px = Uint8List.fromList((await body.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List());
+
+      // 1. Ropa interior → color de la prenda.
+      for (var y = 0; y < h; y++) {
+        final map = y < underwearSplitRow ? top : legs;
+        if (map == null) continue;
+        for (var x = 0; x < w; x++) {
+          final i = (y * w + x) * 4;
+          if (px[i + 3] == 0) continue;
+          final to = map[(px[i] << 16) | (px[i + 1] << 8) | px[i + 2]];
+          if (to != null) {
+            px[i] = (to >> 16) & 0xFF;
+            px[i + 1] = (to >> 8) & 0xFF;
+            px[i + 2] = to & 0xFF;
+          }
+        }
+      }
+
+      // 2. Reborde: píxeles del cuerpo a 1 píxel (en cualquier dirección) de una prenda.
+      if (garments.isNotEmpty) {
+        final mask = Uint8List(w * h);
+        for (final g in garments) {
+          final gp = (await g.toByteData(format: ui.ImageByteFormat.rawRgba))!.buffer.asUint8List();
+          for (var i = 0; i < w * h; i++) {
+            if (gp[i * 4 + 3] > 0) mask[i] = 1;
+          }
+        }
+        final trimmed = Uint8List.fromList(px);
+        for (var y = 0; y < h; y++) {
+          for (var x = 0; x < w; x++) {
+            final i = (y * w + x);
+            if (px[i * 4 + 3] == 0 || mask[i] == 1) continue; // lo tapado por la prenda no importa
+            var near = false;
+            for (var dy = -1; dy <= 1 && !near; dy++) {
+              for (var dx = -1; dx <= 1; dx++) {
+                final nx = x + dx, ny = y + dy;
+                if (nx >= 0 && ny >= 0 && nx < w && ny < h && mask[ny * w + nx] == 1) {
+                  near = true;
+                  break;
+                }
+              }
+            }
+            if (near) {
+              // Se vuelve contorno oscuro: la prenda queda con un borde limpio en vez de un reborde de piel.
+              trimmed[i * 4] = 0x2B;
+              trimmed[i * 4 + 1] = 0x23;
+              trimmed[i * 4 + 2] = 0x40;
+            }
+          }
+        }
+        px.setAll(0, trimmed);
+      }
+
+      final done = Completer<ui.Image>();
+      ui.decodeImageFromPixels(px, w, h, ui.PixelFormat.rgba8888, done.complete);
+      return done.future;
+    });
   }
 
   static final _cuts = <String, Future<ui.Image>>{};

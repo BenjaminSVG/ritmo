@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk"><b>⬇ Descargar para Android</b></a> ·
   <a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip"><b>⬇ Descargar para Windows</b></a> ·
-  <a href="https://benjaminsvg.github.io/ritmo/">Sitio web</a>
+  <a href="https://ritmo-pixel.vercel.app">Sitio web</a>
 </p>
 
 <p align="center">
