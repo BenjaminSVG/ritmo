@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- La reducción de recursos de la versión de release borra lo que no se referencia desde el código Java/Kotlin
+     ni desde XML. El icono de notificaciones lo pide Flutter por su nombre, así que hay que conservarlo. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_ritmo,@mipmap/ic_launcher*" />

@@ -1,0 +1,8 @@
+Using the standard bald head sheet (the 5 head versions in a row, same canvas and same positions as before), I need ISOLATED LAYERS of more glasses, as 4 separate images. If you can only produce one image per reply, do the first one now and continue each time I write "next".
+
+For each image: keep the same canvas as the head sheet, with the 5 positions in the same row, and place the glasses in the EXACT position they would have on each of the 5 heads, over the eyes. Show ONLY the glasses; everything else must be replaced by solid magenta #FF00FF. Same pixel art style: kawaii, 1-pixel lines, flat, no gradients, no anti-aliasing. IMPORTANT: normal prescription glasses, the lenses are completely TRANSPARENT (do not fill or tint them, I must see the eyes through them; only a tiny white #FFF8F0 glint pixel on each lens). The frame is drawn ONLY in dark purple #2B2340, thin (1 pixel) and light, never heavy.
+
+1) SQUARE: thin rectangular frames with rounded corners.
+2) CAT-EYE: thin frames with the outer top corners lifted like a cat eye.
+3) HEXAGON: thin hexagonal frames.
+4) HALF-RIM: frames that only have the top line and the sides, open at the bottom.

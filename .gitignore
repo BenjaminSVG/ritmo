@@ -1,0 +1,28 @@
+# Compilaciones y cachés
+build/
+.dart_tool/
+.gradle/
+*.log
+build_done.txt
+*.iml
+.idea/
+.vscode/
+local.properties
+*.jks
+*.keystore
+key.properties
+
+# Material de referencia de terceros: capturas de otras apps y logos de tecnologías (derechos de sus autores)
+referencias/capturas/
+referencias/logos-tecnologias/
+referencias/widgets/todoist-*
+referencias/widgets/loop-*
+referencias/widgets/*-emulador.png
+
+# Hojas originales de ChatGPT (pesadas; el arte limpio y las herramientas están en el repositorio)
+referencias/arte/originales/
+
+# Datos de trabajo locales
+.claude/
+
+dist/

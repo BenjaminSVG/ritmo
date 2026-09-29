@@ -1,0 +1,16 @@
+﻿Pixel art sprite sheet: 5 versions of the SAME kawaii chibi character in one row, all
+identical in size, pose, face (big shiny eyes, rosy cheeks) and hairstyle, front view,
+standing, arms slightly away from the body, feet on the same baseline.
+Body: man, medium build, short neck.
+Wearing only plain gray shorts (and a plain gray sports top for the woman versions).
+Only the muscle build changes from left to right:
+1) beginner: soft, neutral build
+2) active: slightly more defined
+3) athletic: clearly defined arms and torso
+4) strong: visibly muscular
+5) legendary: very muscular with a small golden glow outline
+Keep it cute, friendly and cartoonish, never unhealthy or negative-looking.
+Pixel art, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones,
+NO gradients, NO anti-aliasing. Skin: use exactly #E8B77F (light), #D39A62 (base),
+#A87445 (shadow). Solid magenta #FF00FF background, no text, no ground shadow.
+Each character must fit a 64x96 pixel grid.

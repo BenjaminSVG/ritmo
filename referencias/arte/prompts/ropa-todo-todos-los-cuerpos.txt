@@ -1,0 +1,67 @@
+I will ask for ISOLATED CLOTHING LAYERS for my pixel art game in 6 parts (A to F), 36 images in total, ONE image per reply. Start with part A, image 1. Each time I write "next", continue with the following image, and when a part ends, move on to the next part without asking. Do not skip any image. Always keep the exact same pixel art style as the previous sheets in this chat.
+
+===== PART A: HEAD ACCESSORIES (8 images) =====
+
+For each image: keep the same canvas as the head sheet, with the 5 positions in the same row, and place the item in the EXACT position it would have on each of the 5 heads. Show ONLY the item; everything else (head, skin, face, hair) must be replaced by solid magenta #FF00FF, so I can overlay it later. Same pixel art style as before: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Every item has ONE main color drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading (I recolor that pair in code). Small details may use ONLY these fixed colors: white #FFF8F0, yellow #FFD866, dark purple #2B2340. Original, cute, generic designs: no logos, no brands, no characters from any franchise.
+
+1) BEANIE: a chunky knit winter beanie with a folded cuff and a round pom-pom on top. It covers the top of the head and hair.
+2) BUCKET HAT: a soft floppy bucket hat with a wide short brim all around and a small white stitched band.
+3) CAT EARS: a thin headband with two pointed cat ears on top (inner ear in dark pink), sitting over the hair.
+4) STRAW HAT: a wide-brim summer hat with a small bow ribbon in the main pink pair, and the crown in yellow #FFD866 with a dark yellow #E0A83A weave shade. The bow is the recolorable part.
+5) WIZARD HAT: a tall floppy pointed wizard hat with a wide brim and three small yellow #FFD866 stars on it.
+6) FLOWER CROWN: a ring of tiny flowers around the top of the head: the flowers in the main pink pair, with white #FFF8F0 centers and small green #5CC28A leaves. It sits on top of the hair, not covering it.
+7) HAIR BOW: a big cute bow sitting on the top right side of the head, over the hair.
+8) HEADBAND SPORT: a wide sweatband around the forehead, in the main pink pair, with one thin white #FFF8F0 stripe.
+
+
+===== PART B: GLASSES (4 images) =====
+
+For each image: keep the same canvas as the head sheet, with the 5 positions in the same row, and place the glasses in the EXACT position they would have on each of the 5 heads, over the eyes. Show ONLY the glasses; everything else must be replaced by solid magenta #FF00FF. Same pixel art style: kawaii, 1-pixel lines, flat, no gradients, no anti-aliasing. IMPORTANT: normal prescription glasses, the lenses are completely TRANSPARENT (do not fill or tint them, I must see the eyes through them; only a tiny white #FFF8F0 glint pixel on each lens). The frame is drawn ONLY in dark purple #2B2340, thin (1 pixel) and light, never heavy.
+
+1) SQUARE: thin rectangular frames with rounded corners.
+2) CAT-EYE: thin frames with the outer top corners lifted like a cat eye.
+3) HEXAGON: thin hexagonal frames.
+4) HALF-RIM: frames that only have the top line and the sides, open at the bottom.
+
+===== PART C: CLOTHES FOR BASE SHEET A, THE MEDIUM MAN (5 images) =====
+
+For each image: keep the same canvas as the base sheet, with the 5 positions in the same row, and place each item in the EXACT position it would have on each of the 5 characters, following each of the 5 muscle builds. Show ONLY the item; everything else (body, skin, underwear, head) must be replaced by solid magenta #FF00FF. Same pixel art style: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Each item is drawn ONLY in one main color plus its shade, so I can recolor it in code.
+
+1) T-SHIRT: a plain short-sleeve t-shirt, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading.
+2) HOODIE: a hooded sweatshirt with the hood down behind the neck, long sleeves and a front pocket, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. It is bigger than the t-shirt, so it covers it.
+3) PANTS: jean-style pants down to the ankles, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. They must fully cover the underwear. Do not draw feet.
+4) SHORTS: sport shorts to just above the knees, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. They must fully cover the underwear.
+5) SNEAKERS: a pair of running sneakers with a white sole #FFF8F0, drawn in pink #FF8FAB with dark pink #D65A7E shading, placed exactly where the feet are. Do not draw legs or ankles above the shoe.
+
+===== PART D: CLOTHES FOR BASE SHEET B, THE BROAD MAN (5 images) =====
+Using ONLY that base sheet (bald, faceless, 5 muscle builds in a row), isolated layers as separate images. Same rules as part C: same canvas, the 5 positions in the same row, each item in the EXACT position on each of the 5 characters following each build; show ONLY the item (body, skin, underwear, head replaced by solid magenta #FF00FF); kawaii pixel art, 1-pixel dark purple outline #2B2340, flat 2-tone shading, no gradients, no anti-aliasing; each item drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. Clothes must fully cover the underwear.
+
+1) T-SHIRT: plain short-sleeve t-shirt.
+2) HOODIE: hooded sweatshirt, hood down, long sleeves, front pocket, bigger than the t-shirt.
+3) PANTS: jean-style pants down to the ankles. Do not draw feet.
+4) SHORTS: sport shorts to just above the knees.
+5) SNEAKERS: running sneakers with a white sole #FFF8F0, exactly where the feet are; no legs above the shoe.
+
+===== PART E: CLOTHES FOR BASE SHEET C, THE MEDIUM WOMAN (7 images) =====
+Using ONLY that base sheet (bald, faceless, 5 muscle builds in a row), isolated layers as separate images. Same rules as part C: same canvas, the 5 positions in the same row, each item in the EXACT position on each of the 5 characters following each build; show ONLY the item (body, skin, underwear, head replaced by solid magenta #FF00FF); kawaii pixel art, 1-pixel dark purple outline #2B2340, flat 2-tone shading, no gradients, no anti-aliasing; each item drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. Clothes must fully cover the underwear.
+
+1) T-SHIRT: plain short-sleeve t-shirt.
+2) HOODIE: hooded sweatshirt, hood down, long sleeves, front pocket, bigger than the t-shirt.
+3) PANTS: jean-style pants down to the ankles. Do not draw feet.
+4) SHORTS: sport shorts to just above the knees.
+5) SNEAKERS: running sneakers with a white sole #FFF8F0, exactly where the feet are; no legs above the shoe.
+6) SKIRT: a cute A-line skirt to mid-thigh.
+7) DRESS: a cute knee-length sundress with thin straps that covers torso and legs (draw it as one piece; the legs below the hem stay magenta).
+
+===== PART F: CLOTHES FOR BASE SHEET D, THE CURVY WOMAN (7 images) =====
+Using ONLY that base sheet (bald, faceless, 5 muscle builds in a row), isolated layers as separate images. Same rules as part C: same canvas, the 5 positions in the same row, each item in the EXACT position on each of the 5 characters following each build; show ONLY the item (body, skin, underwear, head replaced by solid magenta #FF00FF); kawaii pixel art, 1-pixel dark purple outline #2B2340, flat 2-tone shading, no gradients, no anti-aliasing; each item drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. Clothes must fully cover the underwear.
+
+1) T-SHIRT: plain short-sleeve t-shirt.
+2) HOODIE: hooded sweatshirt, hood down, long sleeves, front pocket, bigger than the t-shirt.
+3) PANTS: jean-style pants down to the ankles. Do not draw feet.
+4) SHORTS: sport shorts to just above the knees.
+5) SNEAKERS: running sneakers with a white sole #FFF8F0, exactly where the feet are; no legs above the shoe.
+6) SKIRT: a cute A-line skirt to mid-thigh.
+7) DRESS: a cute knee-length sundress with thin straps that covers torso and legs (draw it as one piece; the legs below the hem stay magenta).
+
+Note: parts A and B (head accessories and glasses) are shared by all four characters, so they are asked only once, on the standard head.

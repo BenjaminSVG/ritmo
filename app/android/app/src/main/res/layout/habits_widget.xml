@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hb_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hábitos"
+            android:textColor="#1B1B1F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hb_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4F6AF5"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hb_empty"
+        style="@style/WidgetLine"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/hb_row1"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name1" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status1" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_row2"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name2" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status2" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_row3"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name3" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status3" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_row4"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name4" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status4" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_row5"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name5" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status5" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_row6"
+        style="@style/WidgetRow">
+        <TextView android:id="@+id/hb_name6" style="@style/WidgetRowName" />
+        <TextView android:id="@+id/hb_status6" style="@style/WidgetRowStatus" />
+    </LinearLayout>
+</LinearLayout>

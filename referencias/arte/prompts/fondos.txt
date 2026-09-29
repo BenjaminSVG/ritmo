@@ -1,0 +1,16 @@
+I will ask for BACKGROUND SCENES for my pixel art game, 12 images in total, ONE image per reply. Start with image 1. Each time I write "next", continue with the following one. Do not skip any.
+
+Rules for every background: a normal image (NOT on magenta), 2:1 horizontal format, cute kawaii pixel art in the same style as the bedroom background you made before: soft pastel colors, hard 1-pixel dark outlines, flat 2-tone shading, no gradients, no anti-aliasing. The whole scene is a side view like a stage: a floor or ground that fills the lower 25% of the image, and the lower CENTER of the scene must be completely clear and empty (a character will stand there, about half the image height). Keep important decorations to the left and right sides and the back wall. No characters, no animals in the center, no text, no logos, no brands. Original generic designs.
+
+1) GYM: a bright cozy home gym with a rack of dumbbells, a yoga mat rolled up, a small bench, a big window and plants.
+2) PARK: a sunny park with big round trees, a bench, flowers, a path and fluffy clouds.
+3) BEACH: a calm beach with soft sand, small waves, a beach umbrella and a sandcastle at the sides, a couple of palm trees.
+4) FOREST: a magical green forest clearing with tall trees, mushrooms, fireflies and soft light rays.
+5) NIGHT CITY ROOFTOP: a rooftop at night with a starry sky, a moon, city lights in the distance, string lights and a few potted plants.
+6) LIBRARY: a cozy library with tall bookshelves on both sides, a ladder, a reading lamp and a rug.
+7) KITCHEN: a warm cute kitchen with a counter, a fridge, hanging pots, a plant and a window.
+8) SNOWY CABIN: the inside of a warm wooden cabin with a fireplace, a window showing snowy mountains, a blanket and a rug.
+9) SPACE STATION: a cute pastel space station room with a big round window showing planets and stars, and soft glowing panels.
+10) JAPANESE GARDEN: a peaceful garden with cherry blossom trees, a small red bridge over a pond at the side, stone lanterns and falling petals.
+11) CAFE: a cute cafe interior with a counter, small round tables at the sides, a chalkboard without readable text, hanging lamps and cakes.
+12) DESERT OASIS: a sunny desert with dunes, a small oasis with palm trees and a pond at one side, and a pastel sky.

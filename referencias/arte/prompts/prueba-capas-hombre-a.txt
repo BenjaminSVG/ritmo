@@ -1,0 +1,9 @@
+Using the bald and faceless base sheet A (the medium-build man, 5 versions in a row), I need a small test set of ISOLATED LAYERS, as 5 separate images, in this order. If you can only produce one image per reply, do the first one now and continue each time I write "next".
+
+For layers 1 to 4: keep the same canvas as the base sheet, with the 5 positions in the same row, and place each item in the EXACT position it would have on each of the 5 characters. Show ONLY the item; everything else (body, skin, shorts, head) must be replaced by solid magenta #FF00FF, so I can overlay it on the base later. Same pixel art style as before: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing.
+
+1) HAIR: short messy hair, drawn ONLY in brown #A9714B with dark brown #6E4530 shading. It covers only the top of the head and the forehead.
+2) EYES: only the face features on the smooth face: big shiny round eyes with a blue iris #4F6AF5 (shade #3446B8) and a white highlight #FFF8F0, small dark eyebrows and a tiny smile. Nothing else.
+3) TOP: only a sleeveless gym tank top, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading, fitting each of the 5 muscle builds (it should follow each build).
+4) BOTTOM: only jogger pants, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading, replacing the gray shorts and fitting each build. The pants go down to the ankles; do not draw feet.
+5) BACKGROUND: a separate normal image, 2:1 horizontal format, cute pastel pixel art scene of a cozy bedroom with a window and plants, using the same palette, with the lower center clear. No characters, no text.

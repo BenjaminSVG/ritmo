@@ -1,0 +1,9 @@
+Using the bald and faceless base sheet A (the medium-build man, 5 versions in a row), I need ISOLATED LAYERS of clothes, as 5 separate images, in this order. If you can only produce one image per reply, do the first one now and continue each time I write "next".
+
+For each image: keep the same canvas as the base sheet, with the 5 positions in the same row, and place each item in the EXACT position it would have on each of the 5 characters, following each of the 5 muscle builds. Show ONLY the item; everything else (body, skin, underwear, head) must be replaced by solid magenta #FF00FF. Same pixel art style: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Each item is drawn ONLY in one main color plus its shade, so I can recolor it in code.
+
+1) T-SHIRT: a plain short-sleeve t-shirt, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading.
+2) HOODIE: a hooded sweatshirt with the hood down behind the neck, long sleeves and a front pocket, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. It is bigger than the t-shirt, so it covers it.
+3) PANTS: jean-style pants down to the ankles, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. They must fully cover the underwear. Do not draw feet.
+4) SHORTS: sport shorts to just above the knees, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. They must fully cover the underwear.
+5) SNEAKERS: a pair of running sneakers with a white sole #FFF8F0, drawn in pink #FF8FAB with dark pink #D65A7E shading, placed exactly where the feet are. Do not draw legs or ankles above the shoe.

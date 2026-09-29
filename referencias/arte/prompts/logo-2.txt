@@ -1,0 +1,19 @@
+I need a NEW, different LOGO and APP ICON for "Ritmo", an app that unites habits, tasks and a calendar, with a cute pixel art character that grows as you keep your routine. Forget the previous pulse-line idea. Make 6 separate images, ONE image per reply. Start with image 1. Each time I write "next", continue with the following one. Do not skip any.
+
+Goal: minimalist, eye-catching, meaningful, instantly recognizable, readable when shrunk to 48 pixels. ONE bold symbol, no small details, centered, generous empty space (the symbol takes about 55% of the icon), no text inside the icon, no character inside the icon.
+
+Style: flat and geometric with a pixel art signature: the symbol is built from clearly visible square pixels with hard stair-step edges, no anti-aliasing, no gradients, no shadows, no glow, no 3D, no thin lines (everything thick and chunky), no decorative corner marks. Use ONLY this palette: background periwinkle blue #4F6AF5; symbol white #FFF8F0; one warm accent yellow #FFD866; a darker blue #3446B8 only for flat shading inside the symbol. No pink.
+
+Three different concepts, each with the meaning that explains it:
+- METRONOME ("ritmo" = rhythm, routine): a chunky pixel metronome, a simple trapezoid body in white with its pendulum arm swinging, and the sliding weight on the arm is a yellow check mark. Meaning: your habits keep the beat; every check keeps the tempo.
+- SPROUT ("growth"): a chunky pixel sprout with two leaves growing out of a small white circle that contains a yellow check. Meaning: every completed habit makes you grow.
+- SUNRISE RING ("a new day, a new beat"): a big white pixel ring (a half sun rising over a horizon line), with a yellow check mark in its center. Meaning: each day is a fresh start with your routine.
+
+1) APP ICON 1: the METRONOME concept on a 1024x1024 rounded-square periwinkle blue background.
+2) APP ICON 2: the SPROUT concept, same background.
+3) APP ICON 3: the SUNRISE RING concept, same background.
+4) ADAPTIVE ICON FOREGROUND: the concept among 1, 2 and 3 that reads clearest at small size, drawn ONLY as the foreground on a solid magenta #FF00FF background (no blue square), centered inside the middle 60% of the 1024x1024 canvas (Android crops the outer parts).
+5) WORDMARK: the word "Ritmo" in a minimalist chunky pixel font, white letters, no outline, with the chosen symbol very small as a mark to the left of the word, on a solid periwinkle blue background, horizontal 3:1 format, generous margins.
+6) NOTIFICATION ICON: a monochrome white silhouette of the chosen symbol on a solid magenta #FF00FF background, 1024x1024, very simple so it stays clear at 24 pixels.
+
+Original design only: no logos, brands or characters from any existing franchise. Do not add any extra text.

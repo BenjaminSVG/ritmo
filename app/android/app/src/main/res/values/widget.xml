@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_today_name">Hoy</string>
+    <string name="widget_habits_name">Hábitos</string>
+    <string name="widget_heatmap_name">Racha y calendario</string>
+    <string name="widget_quick_add_name">Añadir rápido</string>
+    <string name="widget_character_name">Mi personaje</string>
+    <string name="widget_character_description">Tu personaje en su escena, con tus monedas y tu nivel</string>
+    <string name="widget_today_description">Tus hábitos y tareas de hoy, con botón para añadir</string>
+    <string name="widget_habits_description">Tus hábitos de hoy con su progreso</string>
+    <string name="widget_heatmap_description">Racha y calendario de calor de un hábito</string>
+    <string name="widget_quick_add_description">Botón para añadir una tarea o hábito</string>
+
+    <style name="WidgetRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="WidgetRowName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">#1B1B1F</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="WidgetRowStatus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#4F6AF5</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="WidgetLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">#3C3C43</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

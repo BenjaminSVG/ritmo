@@ -1,0 +1,14 @@
+Using the standard bald head sheet (the 5 head versions in a row, same canvas and same positions as before), I need ISOLATED LAYERS of more cute head accessories, as 8 separate images, in this order. If you can only produce one image per reply, do the first one now and continue each time I write "next".
+
+For each image: keep the same canvas as the head sheet, with the 5 positions in the same row, and place the item in the EXACT position it would have on each of the 5 heads. Show ONLY the item; everything else (head, skin, face, hair) must be replaced by solid magenta #FF00FF, so I can overlay it later. Same pixel art style as before: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Every item has ONE main color drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading (I recolor that pair in code). Small details may use ONLY these fixed colors: white #FFF8F0, yellow #FFD866, dark purple #2B2340. Original, cute, generic designs: no logos, no brands, no characters from any franchise.
+
+1) BEANIE: a chunky knit winter beanie with a folded cuff and a round pom-pom on top. It covers the top of the head and hair.
+2) BUCKET HAT: a soft floppy bucket hat with a wide short brim all around and a small white stitched band.
+3) CAT EARS: a thin headband with two pointed cat ears on top (inner ear in dark pink), sitting over the hair.
+4) STRAW HAT: a wide-brim summer hat with a small bow ribbon in the main pink pair, and the crown in yellow #FFD866 with a dark yellow #E0A83A weave shade. The bow is the recolorable part.
+5) WIZARD HAT: a tall floppy pointed wizard hat with a wide brim and three small yellow #FFD866 stars on it.
+6) FLOWER CROWN: a ring of tiny flowers around the top of the head: the flowers in the main pink pair, with white #FFF8F0 centers and small green #5CC28A leaves. It sits on top of the hair, not covering it.
+7) HAIR BOW: a big cute bow sitting on the top right side of the head, over the hair.
+8) HEADBAND SPORT: a wide sweatband around the forehead, in the main pink pair, with one thin white #FFF8F0 stripe.
+
+After these I will ask for glasses variants and clothes.

@@ -1,0 +1,11 @@
+﻿In this chat you generated 4 pixel art sprite sheets, each with 5 versions of the same character in a row (muscle progression, version 1 to 5): (A) the medium-build man, (B) the broader, sturdier man, (C) the medium-build woman, (D) the curvier woman.
+
+Now create the "bald and faceless base" version of ALL 4 sheets, as 4 separate images (one image per sheet), in that same order: A, B, C, D. If you can only produce one image per reply, produce A now and continue with B, C and D each time I write "next".
+
+For each sheet keep EVERYTHING identical to your original image: same character, pose, size, body build, outline, colors, the 5 versions in the same row and order, the same magenta #FF00FF background and the same position of every figure. Change ONLY this:
+1) Remove the hair completely (bald head).
+2) Remove the eyebrows, the eyes and the mouth, leaving a smooth plain skin face with only the ears and the rosy cheeks.
+3) Remove the golden glow outline around the 5th version (no aura at all).
+4) In the 1st version (beginner), make the build neutral and average: natural flat belly, not overweight and not underweight. Keep it cute.
+
+Keep the same pixel art style: hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, NO gradients, NO anti-aliasing. Do not add any text.

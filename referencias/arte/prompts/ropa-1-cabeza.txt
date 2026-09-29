@@ -1,0 +1,7 @@
+Using the standard bald head sheet (the 5 head versions in a row, same canvas and same positions as before), I need ISOLATED LAYERS of head accessories, as 3 separate images, in this order. If you can only produce one image per reply, do the first one now and continue each time I write "next".
+
+For each image: keep the same canvas as the head sheet, with the 5 positions in the same row, and place the item in the EXACT position it would have on each of the 5 heads. Show ONLY the item; everything else (head, skin, face) must be replaced by solid magenta #FF00FF, so I can overlay it later. Same pixel art style as before: kawaii, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Each item is drawn ONLY in one main color plus its shade, so I can recolor it in code.
+
+1) CAP: a baseball cap with a small visor, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. It sits on top of the head and covers the top of the hair area.
+2) GLASSES: round glasses with thin frames, drawn ONLY in dark purple #2B2340 with a small white highlight #FFF8F0 on each lens. They sit over the eyes.
+3) HEADPHONES: over-ear headphones with a band over the top of the head, drawn ONLY in pink #FF8FAB with dark pink #D65A7E shading. The band goes over the top and the ear cups on the sides.

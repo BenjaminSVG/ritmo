@@ -1,0 +1,54 @@
+I will ask for ISOLATED FACE AND HAIR LAYERS for my pixel art game, in 4 parts (A to D), 45 images in total, ONE image per reply. Start with part A, image 1. Each time I write "next", continue with the following image, and when a part ends, move on to the next part without asking. Do not skip any image.
+
+Always use the standard bald head sheet (the 5 head versions in a row, same canvas and same positions as before). Keep the same canvas, with the 5 positions in the same row, and place every item in the EXACT position it would have on each of the 5 heads. Show ONLY the item; everything else (head, skin, other features) must be replaced by solid magenta #FF00FF, so I can overlay it later. Same pixel art style as before: kawaii, cute, hard 1-pixel dark purple outline #2B2340, flat shading with 2 tones, no gradients, no anti-aliasing. Original generic designs only.
+
+===== PART A: EYES WITH EYEBROWS (8 images) =====
+Only the eyes and eyebrows. NO nose and NO mouth in these images. Colors: iris ONLY in blue #4F6AF5 with shade #3446B8 (I recolor that pair in code), white highlight #FFF8F0, everything else dark purple #2B2340.
+A1) BIG ROUND: big shiny round eyes, small dark eyebrows.
+A2) SLEEPY: half-closed relaxed eyes with heavy lids and soft eyebrows.
+A3) HAPPY: closed happy eyes drawn as two upward arcs ^ ^, no iris.
+A4) ALMOND: almond-shaped eyes with two small lashes each and thin curved eyebrows.
+A5) DOTS: tiny simple black dot eyes with small eyebrows.
+A6) SPARKLE: big eyes with a star-shaped white sparkle highlight.
+A7) SWEET: slightly droopy big kind eyes and eyebrows raised in the middle.
+A8) DETERMINED: sharp confident eyes with thick straight eyebrows.
+
+===== PART B: NOSES (6 images) =====
+Only the nose. The nose is drawn ONLY with the three skin tones of the bald head (light #E8B77F, base #D39A62, shade #A87445), plus the dark outline #2B2340 when a line is needed (I recolor the skin trio in code).
+B1) TINY DOT: one tiny dot.
+B2) BUTTON: a small round button nose with a shade underneath.
+B3) L-LINE: a small L-shaped line.
+B4) TRIANGLE: a small pointed triangle.
+B5) NOSTRILS: two tiny dots for the nostrils, no bridge.
+B6) ROUND: a bigger soft round nose with a highlight.
+
+===== PART C: MOUTHS (8 images) =====
+Only the mouth. Colors: dark purple #2B2340 for the lines, white #FFF8F0 for teeth, pink #FF8FAB for the tongue or the inside.
+C1) SMALL SMILE: a tiny gentle smile.
+C2) BIG SMILE: a wide open happy smile with white teeth.
+C3) CAT MOUTH: a small "w" shaped cat mouth.
+C4) NEUTRAL: a short straight line.
+C5) SURPRISED: a small round "o" mouth.
+C6) SMIRK: a smile raised on one side.
+C7) TONGUE: a happy smile with the tongue out in pink.
+C8) FANG GRIN: a cheeky grin with one small white fang.
+
+===== PART D: HAIR (23 images) =====
+Hair drawn ONLY in brown #A9714B with dark brown #6E4530 shading (I recolor that pair in code). The hair covers the top of the head and forehead as each style needs, and must not cover the eyes. For the LONG styles I need TWO images each: FRONT (everything that goes in front of the body) and BACK (only the hair that hangs behind the head and neck, which goes behind the body); draw the back part in the same brown pair.
+D1) BUZZ CUT: very short cropped hair.
+D2) SIDE PART: neat short hair with a side parting.
+D3) CURLY SHORT: short curly hair, bumpy outline.
+D4) AFRO: big round puffy afro.
+D5) SPIKY: short spiky hair standing up.
+D6) MOHAWK: a tall mohawk in the middle, shaved sides.
+D7) PIXIE: short pixie cut with side-swept bangs.
+D8) BOB: chin-length bob with straight bangs.
+D9) TOP KNOT: hair pulled into a small bun on top of the head.
+D10) SHAGGY: medium messy layered hair over the ears.
+D11) SWEPT BANGS: long bangs swept across one side of the forehead, short at the back.
+D12) LONG STRAIGHT FRONT and D13) LONG STRAIGHT BACK.
+D14) LONG WAVY FRONT and D15) LONG WAVY BACK.
+D16) PONYTAIL FRONT (bangs and sides) and D17) PONYTAIL BACK (the tail).
+D18) TWIN TAILS FRONT and D19) TWIN TAILS BACK (two tails hanging at the sides).
+D20) BRAID FRONT and D21) BRAID BACK (one long braid over the back).
+D22) HALF-UP BUN FRONT and D23) HALF-UP BUN BACK (bun on top and the rest of the hair down behind).
