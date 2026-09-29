@@ -4,7 +4,7 @@
   'use strict';
   const BASE = 'juego/';
   const W = 64, H = 96, SW = 384, SH = 192;
-  const U = 3, CU = 4; // píxeles de pantalla por píxel del fondo y del personaje
+  let U = 3, CU = 4; // píxeles de pantalla por píxel del fondo y del personaje (enteros, se ajustan a la pantalla)
 
   // ---- Datos (los mismos de app/lib/pixel) ----
   const SKINS = [
@@ -212,7 +212,7 @@
 
   // ---- Estado y composición ----
   const S = {
-    body: 'mujer_b', lvl: 1, skin: 3, hair: 8, eyeColor: 0, eyeStyle: 2, color: 7, frame: 0,
+    body: 'mujer_b', lvl: 1, skin: 3, hair: 8, eyeColor: 0, eyeStyle: 0, color: 7, frame: 0,
     bg: 'parque', tone: 1,
     eq: { sombrero: 'gorra', cara: null, auriculares: null, torso: 'buzo', piernas: 'pantalon', pies: 'zapatillas', traje: null },
   };
@@ -278,7 +278,23 @@
   const canvas = document.getElementById('juego-lienzo');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  canvas.width = SW * U; canvas.height = SH * U;
+  // El lienzo se dibuja a un tamaño ENTERO de píxeles de pantalla por píxel de arte. Si se dibujara más grande y
+  // el navegador lo redujera, saltaría filas y columnas y el personaje se llenaría de puntitos.
+  function medir() {
+    const dpr = window.devicePixelRatio || 1;
+    const ancho = (canvas.parentElement && canvas.parentElement.clientWidth) || 600;
+    U = Math.min(6, Math.max(1, Math.floor((ancho * dpr) / SW)));
+    CU = Math.max(U + 1, Math.floor(U * 1.5));
+    canvas.width = SW * U; canvas.height = SH * U;
+    canvas.style.width = (SW * U) / dpr + 'px';
+    canvas.style.height = (SH * U) / dpr + 'px';
+  }
+  medir();
+  let temporizador = 0;
+  window.addEventListener('resize', () => {
+    clearTimeout(temporizador);
+    temporizador = setTimeout(() => { medir(); paint(); }, 120);
+  });
 
   function paint() {
     if (!current) return;

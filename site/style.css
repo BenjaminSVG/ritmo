@@ -53,7 +53,7 @@ header.top {
 }
 header.top .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
 header.top .marca { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; text-decoration: none; color: var(--texto); }
-header.top .marca img { width: 32px; height: 32px; image-rendering: pixelated; border-radius: 8px; }
+header.top .marca img { width: 32px; height: 32px; image-rendering: auto; border-radius: 8px; }
 header.top nav { margin-left: auto; display: flex; gap: 18px; font-weight: 700; font-size: 15px; }
 header.top nav a { color: var(--suave); text-decoration: none; }
 header.top nav a:hover { color: var(--azul); }
@@ -73,7 +73,7 @@ header.top nav a:hover { color: var(--azul); }
 .hero h1 { font-size: clamp(40px, 7vw, 68px); line-height: 1.05; margin: 0 0 14px; }
 .hero p { font-size: 20px; margin: 0 0 24px; color: #e8ecff; max-width: 560px; }
 @media (max-width: 860px) { .hero p { margin-inline: auto; } }
-.hero .marca-hero { width: 96px; height: 96px; image-rendering: pixelated; border-radius: 22px; margin-bottom: 18px; box-shadow: 0 8px 0 rgba(0,0,0,.18); }
+.hero .marca-hero { width: 96px; height: 96px; image-rendering: auto; border-radius: 22px; margin-bottom: 18px; box-shadow: 0 8px 0 rgba(0,0,0,.18); }
 .hero .foto { display: flex; justify-content: center; }
 .hero .foto img { width: min(280px, 70%); border-radius: 26px; box-shadow: 0 18px 0 rgba(0,0,0,.18), 0 30px 60px rgba(0,0,0,.3); }
 .acciones { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -109,7 +109,7 @@ header.top nav a:hover { color: var(--azul); }
 
 .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
 @media (max-width: 800px) { .dos { grid-template-columns: 1fr; } }
-.pixelimg { image-rendering: pixelated; width: 100%; border-radius: var(--radio); border: 1px solid var(--linea); background: #edebf5; }
+.pixelimg { image-rendering: auto; width: 100%; border-radius: var(--radio); border: 1px solid var(--linea); background: #edebf5; }
 
 /* Tabla */
 table { width: 100%; border-collapse: collapse; background: var(--tarjeta); border-radius: var(--radio); overflow: hidden; border: 1px solid var(--linea); }
@@ -119,7 +119,7 @@ tr:last-child td { border-bottom: 0; }
 
 .banda { background: color-mix(in srgb, var(--azul) 8%, var(--fondo)); }
 .significado { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
-.significado img { width: 150px; image-rendering: pixelated; border-radius: 30px; box-shadow: 0 8px 0 rgba(52,70,184,.35); }
+.significado img { width: 150px; image-rendering: auto; border-radius: 30px; box-shadow: 0 8px 0 rgba(52,70,184,.35); }
 @media (max-width: 640px) { .significado { grid-template-columns: 1fr; text-align: center; } .significado img { margin-inline: auto; } }
 
 .descargas { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 28px; }
@@ -139,7 +139,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: 
 /* Sección de descarga */
 .btn.grande { font-size: 20px; padding: 18px 30px; }
 .dl-cabeza { text-align: center; margin-bottom: 36px; }
-.dl-logo { width: 96px; height: 96px; image-rendering: pixelated; border-radius: 22px; box-shadow: 0 6px 0 rgba(52,70,184,.35); }
+.dl-logo { width: 96px; height: 96px; image-rendering: auto; border-radius: 22px; box-shadow: 0 6px 0 rgba(52,70,184,.35); }
 .dl-cabeza h2 { margin: 16px 0 18px; }
 .dl-nota { color: var(--suave); margin: 14px auto 0; max-width: 560px; }
 .dl-version { color: var(--suave); margin: 6px 0 0; font-size: 15px; }
@@ -156,7 +156,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: 
 .marco-ventana .barra { background: var(--tinta); padding: 8px 10px; display: flex; gap: 6px; }
 .marco-ventana .barra i { width: 10px; height: 10px; border-radius: 50%; background: var(--azul-claro); display: block; }
 .marco-ventana .cuerpo { padding: 22px 12px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.marco-ventana .cuerpo img { width: 64px; height: 64px; image-rendering: pixelated; border-radius: 14px; }
+.marco-ventana .cuerpo img { width: 64px; height: 64px; image-rendering: auto; border-radius: 14px; }
 .marco-ventana .cuerpo span { font-size: 12px; color: var(--suave); }
 .qr { width: 132px; height: 132px; margin: 8px auto 0; background: #fff; padding: 6px; border-radius: 10px; }
 .qr svg { width: 100%; height: 100%; display: block; }
@@ -245,7 +245,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: 
 @media (max-width: 900px) { .probador-cuerpo { grid-template-columns: 1fr; } }
 .probador-escena { position: sticky; top: 76px; text-align: center; }
 @media (max-width: 900px) { .probador-escena { position: static; } }
-#juego-lienzo { width: 100%; height: auto; aspect-ratio: 2 / 1; image-rendering: pixelated; border-radius: 22px; border: 4px solid var(--tinta); box-shadow: 0 10px 0 var(--tinta), 0 24px 50px rgba(52,70,184,.3); background: var(--azul-claro); opacity: .4; transition: opacity .4s; }
+#juego-lienzo { display: block; margin: 0 auto; max-width: 100%; image-rendering: pixelated; border-radius: 22px; border: 4px solid var(--tinta); box-shadow: 0 10px 0 var(--tinta), 0 24px 50px rgba(52,70,184,.3); background: var(--azul-claro); opacity: .4; transition: opacity .4s; }
 #juego-lienzo.listo { opacity: 1; }
 .probador-botones { display: flex; gap: 12px; justify-content: center; margin-top: 26px; flex-wrap: wrap; }
 .probador-controles { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: var(--radio); padding: 18px 18px 6px; max-height: 640px; overflow: auto; }
@@ -259,3 +259,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: 
 .sw:hover { transform: scale(1.15); }
 .sw.sel { border-color: var(--texto); box-shadow: 0 0 0 3px var(--amarillo); }
 input[type=range] { width: 100%; accent-color: var(--azul); }
+
+/* Probador: escena arriba, a todo el ancho (así el lienzo cabe con una escala entera más grande) */
+.probador-cuerpo { grid-template-columns: 1fr; }
+.probador-escena { position: static; }
+.probador-controles { column-count: 2; column-gap: 32px; max-height: none; overflow: visible; }
+.probador-controles .grupo, #c-prendas .grupo { break-inside: avoid; }
+#c-prendas { display: contents; }
+@media (max-width: 800px) { .probador-controles { column-count: 1; } }
