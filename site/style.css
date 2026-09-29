@@ -135,3 +135,39 @@ details p { margin: 10px 0 0; color: var(--suave); }
 footer { background: var(--tinta); color: #cfd3f7; padding: 36px 0; font-size: 15px; }
 footer a { color: var(--amarillo); }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+
+/* Sección de descarga */
+.btn.grande { font-size: 20px; padding: 18px 30px; }
+.dl-cabeza { text-align: center; margin-bottom: 36px; }
+.dl-logo { width: 96px; height: 96px; image-rendering: pixelated; border-radius: 22px; box-shadow: 0 6px 0 rgba(52,70,184,.35); }
+.dl-cabeza h2 { margin: 16px 0 18px; }
+.dl-nota { color: var(--suave); margin: 14px auto 0; max-width: 560px; }
+.dl-version { color: var(--suave); margin: 6px 0 0; font-size: 15px; }
+.dl-columnas { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 800px) { .dl-columnas { grid-template-columns: 1fr; } }
+.dl-col { text-align: center; padding: 26px; }
+.dl-col ol { text-align: left; color: var(--suave); font-size: 15px; padding-left: 20px; }
+.dl-col .btn { margin: 14px 0 6px; }
+.chica { font-size: 14px; color: var(--suave); }
+.peso { font-weight: 700; opacity: .8; font-size: 14px; }
+.marco-telefono { width: 150px; margin: 6px auto 0; padding: 8px 6px; background: var(--tinta); border-radius: 26px; }
+.marco-telefono img { display: block; width: 100%; border-radius: 18px; }
+.marco-ventana { margin: 6px auto 0; max-width: 300px; border-radius: 12px; overflow: hidden; border: 2px solid var(--tinta); background: var(--fondo); }
+.marco-ventana .barra { background: var(--tinta); padding: 8px 10px; display: flex; gap: 6px; }
+.marco-ventana .barra i { width: 10px; height: 10px; border-radius: 50%; background: var(--azul-claro); display: block; }
+.marco-ventana .cuerpo { padding: 22px 12px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.marco-ventana .cuerpo img { width: 64px; height: 64px; image-rendering: pixelated; border-radius: 14px; }
+.marco-ventana .cuerpo span { font-size: 12px; color: var(--suave); }
+.qr { width: 132px; height: 132px; margin: 8px auto 0; background: #fff; padding: 6px; border-radius: 10px; }
+.qr svg { width: 100%; height: 100%; display: block; }
+.os-android .qr, .os-android #dl-movil .chica { display: none; }
+.dl-tabla { margin-top: 20px; }
+.dl-tabla table { border: 0; }
+.dl-tabla td:first-child { font-weight: 800; width: 34%; }
+.dl-tabla .apagado { color: var(--suave); }
+.huella { font-size: 13px; cursor: pointer; white-space: nowrap; }
+.huella code { background: color-mix(in srgb, var(--azul) 10%, var(--tarjeta)); padding: 2px 6px; border-radius: 6px; }
+.huella.copiado code { outline: 2px solid var(--amarillo); }
+.verificable { margin-top: 20px; color: var(--suave); }
+.verificable h3 { color: var(--texto); }
+@media (max-width: 640px) { .huella { display: none; } }

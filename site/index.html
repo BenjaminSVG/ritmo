@@ -170,32 +170,62 @@
 
   <!-- Descargar -->
   <section class="banda" id="descargar">
-    <div class="wrap center">
-      <h2>Descarga Ritmo</h2>
-      <p class="lead">Gratis y sin cuenta. Elige tu plataforma.</p>
-      <div class="descargas">
-        <div class="tarjeta">
-          <div class="grande">📱</div>
-          <h3 class="pixel">Android</h3>
-          <a class="btn amarillo" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">Descargar el APK</a>
+    <div class="wrap">
+      <div class="dl-cabeza">
+        <img src="img/logo.png" alt="" class="dl-logo">
+        <h2>Descarga Ritmo</h2>
+        <a id="dl-principal" class="btn amarillo grande" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">Descargar para Android</a>
+        <p id="dl-nota" class="dl-nota">Gratis, sin cuenta y de código abierto.</p>
+        <p id="dl-version" class="dl-version">Última versión: <b>v0.1.1</b></p>
+      </div>
+
+      <div class="dl-columnas">
+        <div class="tarjeta dl-col" id="dl-movil">
+          <h3 class="pixel">En el teléfono</h3>
+          <div class="marco-telefono"><img src="img/s-personaje.png" alt="Ritmo en un teléfono Android" loading="lazy"></div>
+          <a class="btn amarillo" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">Android · APK <span class="peso" data-peso="ritmo-android.apk"></span></a>
           <ol>
             <li>Descarga el archivo <code>ritmo-android.apk</code>.</li>
-            <li>Ábrelo. Android te pedirá permitir instalar apps de esta fuente.</li>
-            <li>Abre Ritmo, crea un hábito y añade el widget desde la pantalla de inicio.</li>
+            <li>Ábrelo. Android te pedirá permitir instalar apps de esta fuente: acéptalo.</li>
+            <li>Abre Ritmo y, si quieres, añade sus widgets desde la pantalla de inicio.</li>
           </ol>
+          <p class="chica">¿Estás en la computadora? Escanea con el teléfono:</p>
+          <div id="qr" class="qr" aria-label="Código QR para descargar el APK"></div>
         </div>
-        <div class="tarjeta">
-          <div class="grande">🖥️</div>
-          <h3 class="pixel">Windows</h3>
-          <a class="btn blanco" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip">Descargar el ZIP</a>
+
+        <div class="tarjeta dl-col" id="dl-escritorio">
+          <h3 class="pixel">En la computadora</h3>
+          <div class="marco-ventana">
+            <div class="barra"><i></i><i></i><i></i></div>
+            <div class="cuerpo"><img src="img/logo.png" alt=""><b class="pixel">ritmo.exe</b><span>Hoy · Calendario · Hábitos · Tareas · Personaje</span></div>
+          </div>
+          <a class="btn blanco" href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip">Windows · ZIP <span class="peso" data-peso="ritmo-windows.zip"></span></a>
           <ol>
-            <li>Descarga y descomprime <code>ritmo-windows.zip</code>.</li>
-            <li>Abre <code>ritmo.exe</code>.</li>
-            <li>Si SmartScreen avisa, pulsa <i>Más información → Ejecutar de todas formas</i> (la app aún no está firmada).</li>
+            <li>Descarga <code>ritmo-windows.zip</code> y descomprímelo.</li>
+            <li>Abre <code>ritmo.exe</code> (no necesita instalación).</li>
+            <li>Si SmartScreen avisa, pulsa <i>Más información → Ejecutar de todas formas</i>: la app aún no está firmada.</li>
           </ol>
+          <p class="chica"><b>¿Otro sistema?</b> Todavía no hay versión para iPhone, Mac ni Linux; el código es multiplataforma, así que se puede <a href="https://github.com/BenjaminSVG/ritmo#compilar-desde-el-c%C3%B3digo">compilar tú mismo</a>.</p>
         </div>
       </div>
-      <p style="color:var(--suave);margin-top:20px">¿Prefieres compilarla tú? <a href="https://github.com/BenjaminSVG/ritmo#compilar-desde-el-c%C3%B3digo">Instrucciones en GitHub</a> · <a href="https://github.com/BenjaminSVG/ritmo/releases">Todas las versiones</a></p>
+
+      <div class="tarjeta dl-tabla">
+        <h3>Todas las descargas</h3>
+        <table>
+          <tbody>
+            <tr><td>Android</td><td><a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-android.apk">ritmo-android.apk</a> <span class="peso" data-peso="ritmo-android.apk"></span></td><td class="huella" data-huella="ritmo-android.apk"></td></tr>
+            <tr><td>Windows</td><td><a href="https://github.com/BenjaminSVG/ritmo/releases/latest/download/ritmo-windows.zip">ritmo-windows.zip</a> <span class="peso" data-peso="ritmo-windows.zip"></span></td><td class="huella" data-huella="ritmo-windows.zip"></td></tr>
+            <tr><td>iPhone · Mac · Linux</td><td colspan="2" class="apagado">Todavía no disponible</td></tr>
+            <tr><td>Todas las versiones</td><td colspan="2"><a href="https://github.com/BenjaminSVG/ritmo/releases">Ver el historial en GitHub</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="verificable">
+        <h3>Descargas verificables</h3>
+        <p>Ritmo es de código abierto: el código de cada versión está en <a href="https://github.com/BenjaminSVG/ritmo">GitHub</a> y puedes compilarla tú y comparar. Cada archivo lleva su huella <b>SHA-256</b> en la tabla de arriba para comprobar que la descarga no se alteró
+          (en Windows: <code>Get-FileHash ritmo-windows.zip</code>).</p>
+      </div>
     </div>
   </section>
 
@@ -233,5 +263,63 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+<script>
+(function () {
+  var REPO = 'BenjaminSVG/ritmo';
+  var BASE = 'https://github.com/' + REPO + '/releases/latest/download/';
+  var ua = navigator.userAgent || '';
+  var os = /Android/i.test(ua) ? 'android' : /Windows/i.test(ua) ? 'windows' : /iPhone|iPad|iPod|Macintosh|Mac OS/i.test(ua) ? 'apple' : 'otro';
+  document.documentElement.classList.add('os-' + os);
+
+  // Botón principal según el sistema (como hacen Obsidian o Todoist).
+  var btn = document.getElementById('dl-principal'), nota = document.getElementById('dl-nota');
+  if (os === 'windows') {
+    btn.textContent = 'Descargar para Windows'; btn.href = BASE + 'ritmo-windows.zip';
+    nota.textContent = 'Descomprime el ZIP y abre ritmo.exe. No necesita instalación.';
+  } else if (os === 'android') {
+    nota.textContent = 'Se descarga un archivo APK; Android te pedirá permiso para instalarlo.';
+  } else if (os === 'apple') {
+    btn.textContent = 'Ver todas las descargas'; btn.href = 'https://github.com/' + REPO + '/releases';
+    nota.textContent = 'Todavía no hay versión para iPhone ni Mac. Puedes usar Ritmo en un teléfono Android o en Windows.';
+  } else {
+    btn.textContent = 'Ver todas las descargas'; btn.href = 'https://github.com/' + REPO + '/releases';
+    nota.textContent = 'Hay versiones para Android y Windows.';
+  }
+
+  // Código QR para pasar la descarga al teléfono (desde la computadora).
+  function dibujarQR() {
+    var el = document.getElementById('qr');
+    if (!el || typeof qrcode !== 'function') return;
+    try {
+      var q = qrcode(0, 'M'); q.addData(BASE + 'ritmo-android.apk'); q.make();
+      el.innerHTML = q.createSvgTag(4, 2);
+    } catch (e) { el.style.display = 'none'; }
+  }
+  window.addEventListener('load', dibujarQR);
+
+  // Versión, fecha, tamaños y huellas SHA-256, leídos de la última versión publicada en GitHub.
+  fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (rel) {
+      var fecha = '';
+      try { fecha = new Date(rel.published_at).toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) {}
+      document.getElementById('dl-version').innerHTML =
+        'Última versión: <b>' + rel.tag_name + '</b>' + (fecha ? ' · publicada el ' + fecha : '');
+      (rel.assets || []).forEach(function (a) {
+        document.querySelectorAll('[data-peso="' + a.name + '"]').forEach(function (e) {
+          e.textContent = '· ' + (a.size / 1048576).toFixed(1).replace('.', ',') + ' MB';
+        });
+        var h = (a.digest || '').replace('sha256:', '');
+        if (h) document.querySelectorAll('[data-huella="' + a.name + '"]').forEach(function (e) {
+          e.innerHTML = '<span class="chica">SHA-256</span> <code title="' + h + '">' + h.slice(0, 16) + '…</code>';
+          e.title = 'Pulsa para copiar la huella completa';
+          e.onclick = function () { if (navigator.clipboard) navigator.clipboard.writeText(h); e.classList.add('copiado'); };
+        });
+      });
+    })
+    .catch(function () { /* sin conexión con GitHub: se quedan los textos de arriba */ });
+})();
+</script>
 </body>
 </html>
